@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -34,5 +34,71 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.header {
+  margin-top: 4em;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-bottom: 1em;
+}
+
+.header h1 {
+  color: black;
+  font-size: calc(8px + 1.4vw);
+  text-align: center;
+}
+
+.navbar {
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  height: auto;
+  width: 90%;
+}
+
+.navbutton {
+	flex-grow: 1;
+  border-radius: 10px;
+  min-height: 45px;
+  font-size: calc(3vw);
+}
+
+.navbutton:hover {
+  border: rgb(176, 2, 2) solid 1px;
+}
+.navbutton:active {
+  color: white;
+  background-color: rgb(176, 2, 2)
+}
+.navbutton:hover {
+  border-color: red;
+}
+.navbutton-pressed {
+  flex-grow: 1;
+  border-radius: 10px;
+  min-height: 40px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: 600px){
+  .navbutton {
+    font-size: 15px;
+  }
+
+  .navbar {
+    width: 60%;
+  }
+}
+
+@media (max-height: 400px){
+  .navbutton {
+    height: calc (3vw);
   }
 }
