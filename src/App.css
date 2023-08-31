@@ -38,7 +38,7 @@
 }
 
 .header {
-  margin-top: 4em;
+  margin-top: 1em;
   margin-right: 10vw;
   margin-left: 10vw;
   margin-bottom: 1em;
@@ -51,10 +51,10 @@
 }
 
 .navbar {
-	background-color: black;
-	display: flex;
-	flex-direction: row;
-	margin: 5px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
   padding: 10px;
   border-radius: 10px;
   height: auto;
@@ -125,7 +125,8 @@
 
 
 .text-panel {
-  flex: 1
+    flex: 1 ;
+    animation: slideInFromLeft 1s forwards;
 }
 
 .image-container {
@@ -133,21 +134,53 @@
   display:          flex;
   align-content:    center;
   justify-content:  center;
+  animation: fadeIn 1s forwards;
 }
 
 .image-border {
   display: flex;
   background-color: #E2E8F0;
   border-radius:    50%;
-  width:  calc(20px + 22vw);
-  height: calc(20px + 22vw);
+  width:            calc(20px + 22vw);
+  height:           auto;
   align-self:       center;
-  justify-content: center;
+  justify-content:  center;
 }
 
 .image {
-  position:absolute;
-  height: calc(40px + 20vw);
-  width: auto;
-  align-self:       center;
+    position: absolute;
+    height: calc(40px + 20vw);
+    width: auto;
+    align-self: center;
+    justify-content: center;
+    animation: slideInFromRight 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

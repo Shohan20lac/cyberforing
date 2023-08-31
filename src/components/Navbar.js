@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 
 const cybersecServices = [
     "Risk Assessment",
-    "Vulnertability Assessment",
+    "Vulnerability Assessment",
     "Penetration Testing",
     "Cyber Threat Intelligence"
 ]
