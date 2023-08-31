@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
+import Foreground from './components/Foreground';
 
 import {React, useState} from 'react';
 
@@ -24,6 +25,9 @@ function App() {
           setCurrentScreenIndex  = {currentScreenIndex}
         />
 
+        <Foreground
+          currentScreenIndex = {currentScreenIndex}
+        />
     </div>
   );
 }
