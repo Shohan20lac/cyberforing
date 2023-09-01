@@ -20,13 +20,14 @@ function App() {
 
         <Header/>
         <Navbar
-          handleButtonClick = {handleButtonClick}
+          handleButtonClick      = {handleButtonClick}
           currentScreenIndex     = {currentScreenIndex}
           setCurrentScreenIndex  = {currentScreenIndex}
         />
 
         <Foreground
-          currentScreenIndex = {currentScreenIndex}
+              currentScreenIndex={currentScreenIndex}
+              setCurrentScreenIndex={setCurrentScreenIndex}
         />
     </div>
   );

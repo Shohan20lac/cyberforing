@@ -8,7 +8,8 @@ function Foreground (props) {
         <div className = "foreground">
             <TextPanel/>
             <Image 
-                currentScreenIndex ={props.currentScreenIndex}
+                currentScreenIndex = {props.currentScreenIndex}
+                setCurrentScreenIndex = {props.setCurrentScreenIndex}
             />
         </div>
     );

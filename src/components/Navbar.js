@@ -14,7 +14,7 @@ function Navbar (props) {
             {cybersecServices.map((service, index) => (
                 <button
                     key={index}
-                    className={`navbutton${props.currentScreenIndex === index ? '-pressed': ''}`}
+                    className={`navbutton ${props.currentScreenIndex === index ? 'pressed': ''}`}
                     onClick = {
                         () => {
                             props.handleButtonClick(index)

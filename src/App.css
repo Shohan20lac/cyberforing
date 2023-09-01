@@ -82,13 +82,21 @@
 .navbutton:hover {
   border-color: red;
 }
-.navbutton-pressed {
+.navbutton.pressed {
   flex-grow:        1;
   border-radius:    10px;
   min-height:       40px;
   background-color: red;
   color:            white;
   font-weight:      bold;
+}
+
+.navbutton.sharp {
+    border-radius: 5px;
+    border: none;
+    min-height: 60px;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 @media (min-width: 600px){
@@ -116,11 +124,11 @@
 .text-panel h1 {
   margin-top:    50px;
   margin-bottom: 30px;
-  font-size:     calc(10px + 3vw);
+  font-size:     calc(10px + 2.5vw);
 }
 
 .text-panel p {
-  font-size: calc(5px + 1.5vw);
+  font-size: calc(4px + 1.2vw);
 }
 
 
@@ -134,6 +142,7 @@
   display:          flex;
   align-content:    center;
   justify-content:  center;
+  margin-top: 80px;
   animation: fadeIn 1s forwards;
 }
 
@@ -141,7 +150,7 @@
   display: flex;
   background-color: #E2E8F0;
   border-radius:    50%;
-  width:            calc(20px + 22vw);
+  width:            calc(18px + 20vw);
   height:           auto;
   align-self:       center;
   justify-content:  center;
