@@ -27,8 +27,7 @@ const screens = [
     {
         name: 'Cyber Threat Intelligence',
         images: dudes2, // TODO: update images for this screen once received
-    },
-    // Define more screens here as needed
+    }
 ];
 
 function Image (props) {
@@ -43,30 +42,29 @@ function Image (props) {
         const currentScreenImages = screens[props.currentScreenIndex].images;
         const totalImages = currentScreenImages.length;
 
-        let intervalDuration = 1000; // 2000ms interval duration
-        let transitionDuration = 1000; // 1000ms transition duration
+        let intervalDuration = 1000;
+        let transitionDuration = 1000;
         const finalImageDuration = 3000;
 
         console.log("Component has mounted. current:", current, " next:", next);
 
         const interval = setInterval(() => {
-            setShowCurrent(false); // Fading out current image
+            setShowCurrent(false);
 
             setTimeout(() => {
-                setShowNext(true); // Fading in next image
-                setCurrent((current) => (current + 1) % currentScreenImages.length); // Update currentIndex
-                setNext((next) => (next + 1) % currentScreenImages.length); // Update nextIndex
+                setShowNext(true);
+                setCurrent((current) => (current + 1) % currentScreenImages.length);
+                setNext((next) => (next + 1) % currentScreenImages.length);
 
                 if ((current + 1) % totalImages === 0) {
-                    transitionDuration = finalImageDuration; // 3000ms for the final image
+                    transitionDuration = finalImageDuration;
                 } else {
-                    transitionDuration = finalImageDuration; // Reset transition duration for other images
+                    transitionDuration = finalImageDuration;
                 }
 
             }, transitionDuration);
         }, intervalDuration);
 
-        // Clean up the interval when the component unmounts
         return () => clearInterval(interval);
     }, []);
 
